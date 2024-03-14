@@ -24,12 +24,7 @@
     "outDir": "dist/layers",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "removeComments": true,
-    "paths": {
-      "@/*": ["./Example/src/*"],
-      "@assets/*": ["./Example/src/shared/assets/*"],
-      "@constants/*": ["./Example/src/shared/constants/*"],
-    },
+    "removeComments": true
   },
   "include": [
     "Example/src/entities",

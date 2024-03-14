@@ -1,7 +1,8 @@
 {
   "name": "@kimjeonghun91/my-mui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "custom mui",
+  "main": "dist",
   "repository": {
     "type": "git",
     "url": "https://github.com/KimJeonghun91/my-mui"

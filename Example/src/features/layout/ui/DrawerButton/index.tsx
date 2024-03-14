@@ -1,6 +1,6 @@
 import * as React from "react";
-import { IconRightOpen } from '@/shared/assets/images/index';
 import IconButton from '@mui/material/IconButton';
+import { IconRightOpen } from "../../../../shared/assets/images";
 
 interface Props {
     handleDrawer: () => void;

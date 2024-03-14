@@ -1,5 +1,5 @@
-import { IconDashboard } from "@/shared/assets/images";
-import { PrivateRoutes } from "@/shared/constants/urls";
+import { IconDashboard } from "../assets/images";
+import { PrivateRoutes } from "./urls";
 
 export const DRAWER_MENU_LIST = [
     {
