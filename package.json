@@ -1,9 +1,14 @@
 {
-  "name": "my-mui",
-  "version": "1.0.0",
+  "name": "@kimjeonghun91/my-mui",
+  "version": "0.0.1",
   "description": "custom mui",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KimJeonghun91/my-mui"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "install:dev": "cd Example && yarn install",
     "start:dev": "cd Example && yarn dev",
