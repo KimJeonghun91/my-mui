@@ -26,12 +26,6 @@
     "allowSyntheticDefaultImports": true,
     "removeComments": true
   },
-  "include": [
-    "Example/src",
-  ],
-  "exclude": [
-    "Example/src/app",
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "Example", "dist"]
 }
