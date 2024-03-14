@@ -1,6 +1,6 @@
 {
   "name": "@kimjeonghun91/my-mui",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "custom mui",
   "main": "dist",
   "repository": {
@@ -13,8 +13,16 @@
   "scripts": {
     "install:dev": "cd Example && yarn install",
     "start:dev": "cd Example && yarn dev",
-    "build:npm": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui/* ./dist",
+    "build:npm": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui ./dist/node_modules",
+    "build:npm:x": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui/* ./dist",
     "publish:npm": "npm publish"
+  },
+  "dependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.0",
+    "@mui/material": "5.15.13",
+    "@mui/system": "5.15.13",
+    "@mui/x-date-pickers": "6.19.6"
   },
   "peerDependencies": {
     "@emotion/react": "11.11.4",

@@ -21,18 +21,16 @@
     "strictNullChecks": true,
     //   "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "outDir": "dist/layers",
+    "outDir": "dist",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "removeComments": true
   },
   "include": [
-    "Example/src/entities",
-    "Example/src/features",
-    "Example/src/shared",
-    "Example/src/widgets"
+    "Example/src",
   ],
   "exclude": [
+    "Example/src/app",
     "node_modules",
     "dist"
   ]
