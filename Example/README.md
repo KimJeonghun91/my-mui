@@ -6,12 +6,7 @@
 
 
 ### Installing dependencies:
-- next : https://github.com/KimJeonghun91/next-my-core
-- styled-components : (예정)
-- mui : (예정)
-- zustand : (예정)
-- react-query : (예정)
-
+- ...
 
 ### Getting Started
 yarn을 사용해주세요!!
