@@ -7,7 +7,7 @@
   "scripts": {
     "install:dev": "cd Example && yarn install",
     "start:dev": "cd Example && yarn dev",
-    "build:npm": "rm -rf dist && cp -R ./Example/node_modules/@mui ./Example/src/@mui && tsc",
+    "build:npm": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui/* ./dist",
     "publish:npm": "npm publish"
   },
   "peerDependencies": {
