@@ -14,7 +14,7 @@
   "scripts": {
     "install:dev": "cd Example && yarn install",
     "start:dev": "cd Example && yarn dev",
-    "build:npm": "rm -rf dist && mkdir dist && tsc && cp -R ./Example/src/shared/css ./dist/shared/css",
+    "build:npm": "rm -rf dist && mkdir dist && tsc && cp -R ./Example/lib/shared/css ./dist/shared/css",
     "publish:npm": "cp -R ./.npmignore ./dist && cp -R ./package.json ./dist && cd dist && npm publish",
     "xxxxx:publish:npm": "cp -R ./.babelrc ./dist && cp -R ./.npmignore ./dist && cp -R ./package.json ./dist && cd dist && npm publish",
     "xxxxxx:build:npm": "rm -rf dist && mkdir dist && tsc && mkdir -p ./dist/node_modules && cp -R ./Example/node_modules/@mui ./dist/node_modules/@mui",

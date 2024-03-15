@@ -1,13 +1,18 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
-import { LogoGoogle, LogoGoogleMini } from '../../../shared/assets/images';
 
 interface Props {
     open: boolean;
+    logoOpen: React.JSX.Element;
+    logoClose: React.JSX.Element;
 }
 
-const DrawerHeader: React.FC<Props> = ({ open }) => {
+const DrawerHeader: React.FC<Props> = ({
+    open,
+    logoOpen,
+    logoClose
+}) => {
     const Header = styled('div')(({ theme }) => ({
         display: 'flex',
         alignItems: 'center',
@@ -20,7 +25,7 @@ const DrawerHeader: React.FC<Props> = ({ open }) => {
         <Header>
             <IconButton>
                 {
-                    open ? <LogoGoogle /> : <LogoGoogleMini />
+                    open ? logoOpen : logoClose
                 }
             </IconButton>
         </Header>

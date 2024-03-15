@@ -8,10 +8,14 @@ import { useLayoutDrawer } from '../model/useLayoutDrawer';
 
 interface Props {
     menuList: DrawerMenuProps[];
+    logoOpen: React.JSX.Element;
+    logoClose: React.JSX.Element;
 }
 
 const Drawer: React.FC<Props> = ({
     menuList,
+    logoOpen,
+    logoClose
 }) => {
     const {
         theme,
@@ -39,7 +43,7 @@ const Drawer: React.FC<Props> = ({
             }}
             open={open}
         >
-            <DrawerHeader open={open} />
+            <DrawerHeader open={open} logoOpen={logoOpen} logoClose={logoClose} />
             <Divider />
             <DrawerMenuList menuList={menuList} open={open} />
         </MuiDrawer>

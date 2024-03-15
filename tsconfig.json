@@ -23,11 +23,10 @@
     "removeComments": true
   },
   "include": [
-    "Example/src",
+    "Example/lib",
   ],
   "exclude": [
-    "Example/src/app",
-    "Example/node_modules",
+    "node_modules",
     "dist"
   ]
 }
