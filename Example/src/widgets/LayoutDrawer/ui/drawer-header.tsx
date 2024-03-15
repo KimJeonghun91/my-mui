@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-import { IconButton } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 import { LogoGoogle, LogoGoogleMini } from '../../../shared/assets/images';
 
 interface Props {

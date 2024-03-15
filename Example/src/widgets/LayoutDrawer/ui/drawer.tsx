@@ -1,7 +1,8 @@
 import React from 'react';
 import MuiDrawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
-import { CSSObject, Theme, styled } from '@mui/material/styles';
+import { CSSObject, Theme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import { DrawerMenuProps } from '../model/types';
 import DrawerHeader from './drawer-header';
 import DrawerMenuList from './drawer-menu-list';
@@ -21,29 +22,30 @@ const Drawer: React.FC<Props> = ({
     openedMixin,
     closedMixin,
 }) => {
-    const DrawerContainer = styled(MuiDrawer)(
-        ({ theme, open }) => ({
-            width: drawerWidth,
-            flexShrink: 0,
-            whiteSpace: 'nowrap',
-            boxSizing: 'border-box',
-            ...(open && {
-                ...openedMixin(theme),
-                '& .MuiDrawer-paper': openedMixin(theme),
-            }),
-            ...(!open && {
-                ...closedMixin(theme),
-                '& .MuiDrawer-paper': closedMixin(theme),
-            }),
-        }),
-    );
+    const theme = useTheme();
 
     return (
-        <DrawerContainer variant="permanent" open={open}>
+        <MuiDrawer variant="permanent"
+            sx={{
+                width: drawerWidth,
+                flexShrink: 0,
+                whiteSpace: 'nowrap',
+                boxSizing: 'border-box',
+                ...(open && {
+                    ...openedMixin(theme),
+                    '& .MuiDrawer-paper': openedMixin(theme),
+                }),
+                ...(!open && {
+                    ...closedMixin(theme),
+                    '& .MuiDrawer-paper': closedMixin(theme),
+                }),
+            }}
+            open={open}
+        >
             <DrawerHeader open={open} />
             <Divider />
             <DrawerMenuList menuList={menuList} open={open} />
-        </DrawerContainer>
+        </MuiDrawer>
     )
 }
 
