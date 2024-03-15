@@ -1,9 +1,9 @@
 {
   "name": "@kimjeonghun91/my-mui",
-  "version": "0.0.15",
+  "version": "0.0.17",
   "description": "custom mui",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/KimJeonghun91/my-mui"
@@ -16,6 +16,7 @@
     "start:dev": "cd Example && yarn dev",
     "build:npm": "rm -rf dist && mkdir dist && tsc && mkdir -p ./dist/node_modules && cp -R ./Example/node_modules/@mui ./dist/node_modules/@mui",
     "publish:npm": "cp -R ./.npmignore ./dist && cp -R ./package.json ./dist && cd dist && npm publish",
+    "xxxxx:publish:npm": "cp -R ./.babelrc ./dist && cp -R ./.npmignore ./dist && cp -R ./package.json ./dist && cd dist && npm publish",
     "xxxxx:build:npm": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui/* ./dist"
   },
   "dependencies": {
