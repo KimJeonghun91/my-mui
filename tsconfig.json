@@ -1,28 +1,18 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "module": "esnext",
-    "target": "es2018",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "sourceMap": true,
-    "allowJs": true,
+    "target": "es5",
+    "lib": ["es2020", "dom"],
     "jsx": "preserve",
-    "esModuleInterop": true,
-    "declaration": true,
-    "declarationMap": true,
+    "allowJs": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strict": true,
-    "outDir": "dist",
-    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "removeComments": true,
     "experimentalDecorators": true
   },
   "include": [
