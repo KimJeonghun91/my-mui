@@ -1,6 +1,6 @@
 {
   "name": "@kimjeonghun91/my-mui",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "description": "custom mui",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,8 +15,8 @@
     "install:dev": "cd Example && yarn install",
     "start:dev": "cd Example && yarn dev",
     "build:npm": "rm -rf dist && mkdir dist && tsc && mkdir -p ./dist/node_modules && cp -R ./Example/node_modules/@mui ./dist/node_modules/@mui",
-    "build:npm:x": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui/* ./dist",
-    "publish:npm": "npm publish"
+    "publish:npm": "cp -R ./.npmignore ./dist && cp -R ./package.json ./dist && cd dist && npm publish",
+    "xxxxx:build:npm": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui/* ./dist"
   },
   "dependencies": {
     "@emotion/react": "11.11.4",
