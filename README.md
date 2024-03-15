@@ -8,13 +8,15 @@
 
 FSD 규칙에 따른 커스텀 컴포넌트
 
-- entities
+개발시 lib에 코드를 작성하고 src 내부에서 lib을 사용해야됨.
 
-- features
+- lib/entities
 
-- shared
+- lib/features
 
-- widgets
+- lib/shared
+
+- lib/widgets
 
 
 
