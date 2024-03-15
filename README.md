@@ -3,11 +3,27 @@
 커스텀 MUI
 
 
+
 ## 사용법
 
-layers 에 커스텀 컴포넌트가 정의되어져 있습니다.
+FSD 규칙에 따른 커스텀 컴포넌트
 
-나머지는 mui와 사용방법이 동일합니다.
+- entities
+
+- features
+
+- shared
+
+- widgets
+
+
+
+## 테스트 방법
+
+- install:dev
+
+- start:dev
+
 
 
 ## git npm 패키지 배포
@@ -21,6 +37,11 @@ layers 에 커스텀 컴포넌트가 정의되어져 있습니다.
     "url": "https://github.com/..."
   },
 ```
+
+- build:npm
+
+- publish:npm
+
 
 
 ## git npm 설치

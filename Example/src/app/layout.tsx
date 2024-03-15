@@ -1,4 +1,3 @@
-import "../shared/styles/globals.css";
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { StyledEngineProvider } from '@mui/material/styles';
@@ -7,6 +6,7 @@ import Box from '@mui/material/Box';
 import { DRAWER_MENU_LIST } from "./constants/drawerMenuList";
 import ThemeClient from "../shared/theme";
 import LayoutDrawer from "../widgets/LayoutDrawer";
+import "../shared/styles/globals.css";
 
 const defaultFont = Noto_Sans_KR({ subsets: ["latin"] });
 

@@ -4,7 +4,7 @@
     "module": "esnext",
     "target": "es5",
     "lib": ["es2020", "dom"],
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
@@ -13,14 +13,21 @@
     "noImplicitAny": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "removeComments": true
   },
   "include": [
     "Example/src",
   ],
   "exclude": [
     "Example/src/app",
-    "node_modules",
+    "Example/node_modules",
     "dist"
   ]
 }
