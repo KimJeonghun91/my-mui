@@ -1,7 +1,31 @@
-import { useState } from 'react';
+import { ReactNode, createContext, useContext, useState } from 'react';
 import { Theme, CSSObject } from '@mui/material/styles';
 
-const useLayoutDrawer = () => {
+interface LayoutDrawerContextType {
+    open: boolean;
+    drawerWidth: number;
+    handleDrawer: () => void;
+    openedMixin: (theme: Theme) => CSSObject;
+    closedMixin: (theme: Theme) => CSSObject;
+    isSubMenuOpen: boolean;
+    handleToggleSubMenu: () => void;
+}
+
+interface LayoutDrawerProviderProps {
+    children: ReactNode;
+}
+
+const ThemeContext = createContext<LayoutDrawerContextType | null>(null);
+
+export const useLayoutDrawer = () => {
+    const context = useContext(ThemeContext);
+    if (!context) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+    return context;
+}
+
+export const LayoutDrawerProvider:React.FC<LayoutDrawerProviderProps>  = ({ children }: any) => {
     const [open, setOpen] = useState(false);
     const [isSubMenuOpen, setSubMenuOpen] = useState(false);
     const drawerWidth = 200;
@@ -36,15 +60,17 @@ const useLayoutDrawer = () => {
         },
     });
 
-    return {
-        open,
-        drawerWidth,
-        handleDrawer,
-        openedMixin,
-        closedMixin,
-        isSubMenuOpen,
-        handleToggleSubMenu
-    }
+    return (
+        <ThemeContext.Provider value={{
+            open,
+            drawerWidth,
+            handleDrawer,
+            openedMixin,
+            closedMixin,
+            isSubMenuOpen,
+            handleToggleSubMenu
+        }}>
+            {children}
+        </ThemeContext.Provider>
+    );
 }
-
-export default useLayoutDrawer;

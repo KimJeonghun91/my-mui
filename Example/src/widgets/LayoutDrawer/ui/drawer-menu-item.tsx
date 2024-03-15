@@ -8,10 +8,10 @@ import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import { DrawerMenuProps } from '../model/types';
 import { Box, Collapse, styled } from '@mui/material';
 import DrawerMenuSub from './drawer-menu-item-sub';
-import useLayoutDrawer from '../model/useLayoutDrawer';
 import DrawerTooltipSub from './drawer-tooltip-sub';
 import { SvgBox } from '../../../shared/ui/svgBox';
 import UpArrow from '../../../shared/assets/images/UpArrow';
+import { useLayoutDrawer } from '../model/useLayoutDrawer';
 
 interface Props {
     menuItem: DrawerMenuProps;
@@ -59,9 +59,6 @@ const DrawerMenuItem: React.FC<Props> = ({
                             alignItems: 'center',
                             cursor: 'pointer',
                             borderRadius: 2.5,
-                            // '&:hover': {
-                            //     backgroundColor: '#EDFAFF'
-                            // },
                         }}
                     >
                         {

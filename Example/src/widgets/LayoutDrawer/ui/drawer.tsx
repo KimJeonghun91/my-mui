@@ -1,28 +1,26 @@
 import React from 'react';
 import MuiDrawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
-import { CSSObject, Theme } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
 import { DrawerMenuProps } from '../model/types';
 import DrawerHeader from './drawer-header';
 import DrawerMenuList from './drawer-menu-list';
+import { useLayoutDrawer } from '../model/useLayoutDrawer';
 
 interface Props {
-    open: boolean;
     menuList: DrawerMenuProps[];
-    drawerWidth: number;
-    openedMixin: (theme: Theme) => CSSObject;
-    closedMixin: (theme: Theme) => CSSObject;
 }
 
 const Drawer: React.FC<Props> = ({
     menuList,
-    open,
-    drawerWidth,
-    openedMixin,
-    closedMixin,
 }) => {
     const theme = useTheme();
+    const {
+        open,
+        drawerWidth,
+        openedMixin,
+        closedMixin
+    } = useLayoutDrawer();
 
     return (
         <MuiDrawer variant="permanent"

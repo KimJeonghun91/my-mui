@@ -3,7 +3,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { DrawerMenuProps } from './model/types';
-import useLayoutDrawer from './model/useLayoutDrawer';
+import { LayoutDrawerProvider } from './model/useLayoutDrawer';
 import Drawer from './ui/drawer';
 import { DrawerButton } from './ui/drawer-button';
 
@@ -12,28 +12,13 @@ interface Props {
 }
 
 const LayoutDrawer: React.FC<Props> = ({ menuList }) => {
-    const { 
-        open,
-        drawerWidth,
-        handleDrawer,
-        openedMixin,
-        closedMixin,
-     } = useLayoutDrawer();
-
     return (
-        <Box sx={{ position: 'relative' }}>
-            <Drawer
-                menuList={menuList}
-                open={open}
-                drawerWidth={drawerWidth}
-                openedMixin={openedMixin}
-                closedMixin={closedMixin}
-            />
-            <DrawerButton
-                handleDrawer={handleDrawer}
-                open={open}
-            />
-        </Box>
+        <LayoutDrawerProvider>
+            <Box sx={{ position: 'relative' }}>
+                <Drawer menuList={menuList} />
+                <DrawerButton />
+            </Box>
+        </LayoutDrawerProvider>
     )
 }
 
