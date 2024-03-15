@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import IconButton from '@mui/material/IconButton';
 import { IconRightOpen } from "../../../shared/assets/images";
 import { useLayoutDrawer } from "../model/useLayoutDrawer";
@@ -7,15 +7,10 @@ interface Props {
 }
 
 export const DrawerButton: React.FC<Props> = ({ }) => {
-    const [rotated, setRotated] = useState(false);
     const {
         open,
         handleDrawer,
     } = useLayoutDrawer();
-
-    useEffect(() => {
-        setRotated(open);
-    }, [open]);
 
     return (
         <IconButton
@@ -32,7 +27,7 @@ export const DrawerButton: React.FC<Props> = ({ }) => {
                 border: '1px solid rgba(230, 230, 230, 1)',
                 padding: 0.2,
                 transition: 'transform 0.8s ease',
-                transform: rotated ? 'rotate(180deg)' : 'rotate(0deg)',
+                transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
             }}
             onClick={handleDrawer}
         >

@@ -1,7 +1,6 @@
 import React from 'react';
 import MuiDrawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
-import { useTheme } from '@mui/material/styles';
 import { DrawerMenuProps } from '../model/types';
 import DrawerHeader from './drawer-header';
 import DrawerMenuList from './drawer-menu-list';
@@ -14,8 +13,8 @@ interface Props {
 const Drawer: React.FC<Props> = ({
     menuList,
 }) => {
-    const theme = useTheme();
     const {
+        theme,
         open,
         drawerWidth,
         openedMixin,

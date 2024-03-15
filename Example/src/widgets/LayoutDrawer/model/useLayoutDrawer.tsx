@@ -1,7 +1,9 @@
 import { ReactNode, createContext, useContext, useState } from 'react';
 import { Theme, CSSObject } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 interface LayoutDrawerContextType {
+    theme: Theme;
     open: boolean;
     drawerWidth: number;
     handleDrawer: () => void;
@@ -26,6 +28,7 @@ export const useLayoutDrawer = () => {
 }
 
 export const LayoutDrawerProvider:React.FC<LayoutDrawerProviderProps>  = ({ children }: any) => {
+    const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [isSubMenuOpen, setSubMenuOpen] = useState(false);
     const drawerWidth = 200;
@@ -62,6 +65,7 @@ export const LayoutDrawerProvider:React.FC<LayoutDrawerProviderProps>  = ({ chil
 
     return (
         <ThemeContext.Provider value={{
+            theme,
             open,
             drawerWidth,
             handleDrawer,
