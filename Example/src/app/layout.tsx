@@ -5,9 +5,9 @@ import { Noto_Sans_KR } from "next/font/google";
 import Box from '@mui/material/Box';
 import ThemeClient from "../../lib/shared/theme";
 import LayoutDrawer from "../../lib/widgets/LayoutDrawer";
-import "../../lib/shared/css/globals.css";
 import { DRAWER_MENU_LIST } from '../shared/constants/drawerMenuList';
 import { LogoGoogle, LogoGoogleMini } from '../shared/assets/images';
+import "../../lib/shared/css/globals.css";
 
 const defaultFont = Noto_Sans_KR({ subsets: ["latin"] });
 
