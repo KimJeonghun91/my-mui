@@ -4,7 +4,7 @@ import type { Metadata, Viewport } from 'next';
 import { StyledEngineProvider } from '@mui/material/styles';
 import { Noto_Sans_KR } from "next/font/google";
 import Box from '@mui/material/Box';
-import { DRAWER_MENU_LIST } from "../shared/constants/drawerMenuList";
+import { DRAWER_MENU_LIST } from "./constants/drawerMenuList";
 import ThemeClient from "../shared/theme";
 import LayoutDrawer from "../widgets/LayoutDrawer";
 

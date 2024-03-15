@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import { DrawerMenuProps } from './model/types';
 import useLayoutDrawer from './model/useLayoutDrawer';
 import Drawer from './ui/drawer';
-import { DrawerButton } from '../../features/layout';
+import { DrawerButton } from './ui/drawer-button';
 
 interface Props {
     menuList: DrawerMenuProps[];

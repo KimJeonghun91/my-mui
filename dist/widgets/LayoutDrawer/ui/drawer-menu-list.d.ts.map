@@ -1,1 +1,0 @@
-{"version":3,"file":"drawer-menu-list.d.ts","sourceRoot":"","sources":["../../../../Example/src/widgets/LayoutDrawer/ui/drawer-menu-list.tsx"],"names":[],"mappings":";AAEA,OAAO,EAAE,eAAe,EAAE,MAAM,gBAAgB,CAAC;AAGjD,UAAU,KAAK;IACX,QAAQ,EAAE,eAAe,EAAE,CAAC;IAC5B,IAAI,EAAE,OAAO,CAAC;CACjB;AAED,QAAA,MAAM,cAAc,EAAE,KAAK,CAAC,EAAE,CAAC,KAAK,CASnC,CAAC;AAEF,eAAe,cAAc,CAAC"}

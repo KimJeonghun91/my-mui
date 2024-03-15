@@ -1,8 +1,9 @@
 {
   "name": "@kimjeonghun91/my-mui",
-  "version": "0.0.7",
+  "version": "0.0.11",
   "description": "custom mui",
-  "main": "dist",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/KimJeonghun91/my-mui"
@@ -13,7 +14,7 @@
   "scripts": {
     "install:dev": "cd Example && yarn install",
     "start:dev": "cd Example && yarn dev",
-    "build:npm": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui ./dist/node_modules",
+    "build:npm": "rm -rf dist && mkdir dist && tsc && mkdir -p ./dist/node_modules && cp -R ./Example/node_modules/@mui ./dist/node_modules/@mui",
     "build:npm:x": "rm -rf dist && tsc && cp -R ./Example/node_modules/@mui/* ./dist",
     "publish:npm": "npm publish"
   },
