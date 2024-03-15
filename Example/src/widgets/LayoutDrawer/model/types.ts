@@ -1,4 +1,5 @@
 import {  Theme, CSSObject } from "@mui/material";
+import { ReactNode } from "react";
 
 export interface DrawerMenuSubProps {
     title: string;
@@ -20,4 +21,19 @@ export interface UseLayoutDrawerProps {
     openedMixin: (theme: Theme) => CSSObject;
     closedMixin: (theme: Theme) => CSSObject;
     handleToggleSubMenu: () => void;
+}
+
+export interface LayoutDrawerContextType {
+    theme: Theme;
+    open: boolean;
+    drawerWidth: number;
+    handleDrawer: () => void;
+    openedMixin: (theme: Theme) => CSSObject;
+    closedMixin: (theme: Theme) => CSSObject;
+    isSubMenuOpen: boolean;
+    handleToggleSubMenu: () => void;
+}
+
+export interface LayoutDrawerProviderProps {
+    children: ReactNode;
 }

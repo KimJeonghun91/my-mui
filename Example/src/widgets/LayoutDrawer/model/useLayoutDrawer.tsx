@@ -1,21 +1,7 @@
-import { ReactNode, createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { Theme, CSSObject } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
-
-interface LayoutDrawerContextType {
-    theme: Theme;
-    open: boolean;
-    drawerWidth: number;
-    handleDrawer: () => void;
-    openedMixin: (theme: Theme) => CSSObject;
-    closedMixin: (theme: Theme) => CSSObject;
-    isSubMenuOpen: boolean;
-    handleToggleSubMenu: () => void;
-}
-
-interface LayoutDrawerProviderProps {
-    children: ReactNode;
-}
+import { LayoutDrawerContextType, LayoutDrawerProviderProps } from './types';
 
 const ThemeContext = createContext<LayoutDrawerContextType | null>(null);
 
@@ -27,7 +13,7 @@ export const useLayoutDrawer = () => {
     return context;
 }
 
-export const LayoutDrawerProvider:React.FC<LayoutDrawerProviderProps>  = ({ children }: any) => {
+export const LayoutDrawerProvider: React.FC<LayoutDrawerProviderProps> = ({ children }: any) => {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [isSubMenuOpen, setSubMenuOpen] = useState(false);
