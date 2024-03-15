@@ -1,7 +1,8 @@
 "use client";
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import Box from '@mui/material/Box';
+import { usePathname } from 'next/navigation';
 import { DrawerMenuProps } from './model/types';
 import { LayoutDrawerProvider } from './model/useLayoutDrawer';
 import Drawer from './ui/drawer';
@@ -13,19 +14,26 @@ interface Props {
     logoClose: React.JSX.Element;
 }
 
-const LayoutDrawer: React.FC<Props> = ({
-    menuList,
-    logoOpen,
-    logoClose
-}) => {
+const useIsDrawerMenuList = (menuList: DrawerMenuProps[], currentPath: string) => useMemo(() =>
+    menuList.some(menuItem =>
+        menuItem.path === currentPath ||
+        menuItem.subMenu?.some(subMenuItem => subMenuItem.path === currentPath)
+    ), [menuList, currentPath]);
+
+const LayoutDrawer: React.FC<Props> = ({ menuList, logoOpen, logoClose }) => {
+    const pathName = usePathname();
+    const isDrawerMenuList = useIsDrawerMenuList(menuList, pathName);
+
     return (
         <LayoutDrawerProvider>
-            <Box sx={{ position: 'relative' }}>
-                <Drawer menuList={menuList} logoOpen={logoOpen} logoClose={logoClose} />
-                <DrawerButton />
-            </Box>
+            {isDrawerMenuList && (
+                <Box sx={{ position: 'relative' }}>
+                    <Drawer menuList={menuList} logoOpen={logoOpen} logoClose={logoClose} />
+                    <DrawerButton />
+                </Box>
+            )}
         </LayoutDrawerProvider>
-    )
-}
+    );
+};
 
 export default LayoutDrawer;
