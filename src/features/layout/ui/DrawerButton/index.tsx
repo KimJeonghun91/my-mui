@@ -1,5 +1,5 @@
-import * as React from "react";
-import IconButton from '@mui/material/IconButton';
+import React, { useState, useEffect } from "react";
+import { IconButton } from '@mui/material';
 import { IconRightOpen } from "../../../../shared/assets/images";
 
 interface Props {
@@ -8,9 +8,9 @@ interface Props {
 }
 
 export const DrawerButton: React.FC<Props> = ({ open, handleDrawer }) => {
-    const [rotated, setRotated] = React.useState(false);
+    const [rotated, setRotated] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         setRotated(open);
     }, [open]);
 

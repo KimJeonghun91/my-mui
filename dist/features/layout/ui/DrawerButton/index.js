@@ -1,10 +1,10 @@
-import * as React from "react";
-import IconButton from '@mui/material/IconButton';
+import React, { useState, useEffect } from "react";
+import { IconButton } from '@mui/material';
 import { IconRightOpen } from "../../../../shared/assets/images";
 export var DrawerButton = function (_a) {
     var open = _a.open, handleDrawer = _a.handleDrawer;
-    var _b = React.useState(false), rotated = _b[0], setRotated = _b[1];
-    React.useEffect(function () {
+    var _b = useState(false), rotated = _b[0], setRotated = _b[1];
+    useEffect(function () {
         setRotated(open);
     }, [open]);
     return (<IconButton sx={{
