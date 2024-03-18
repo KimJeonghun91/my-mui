@@ -3,7 +3,7 @@
 import { styled } from "@mui/material";
 import * as yup from 'yup';
 import RootView from "../../../lib/shared/ui/rootView";
-import Form from "../../../lib/widgets/Form";
+import Form, { FormValues } from "../../../lib/widgets/Form";
 
 export default function Login() {
 
@@ -35,17 +35,22 @@ export default function Login() {
       .required('Password is required'),
   });
 
-  const handleSubmit = () => {
-
+  const handleSubmit = (values: FormValues) => {
+    console.log(values);
   }
 
 
   return (
     <RootView>
       <LoginBackground>
-        <LoginBox>
-          <Form initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}></Form>
-        </LoginBox>
+        <LoginContainer>
+          <Form
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+            submitText="로그인"
+          />
+        </LoginContainer>
       </LoginBackground>
     </RootView>
   );
@@ -64,13 +69,17 @@ const LoginBackground = styled('div')(({ theme }) => ({
   alignItems: 'center',
 }));
 
-const LoginBox = styled('div')({
+const LoginContainer = styled('div')({
   position: 'relative',
-  width: '33.33%',
-  height: '100%',
-  background: 'rgba(255, 255, 255, 0.5)',
+  minWidth: '380px',
+  padding: '40px',
+  background: 'rgba(255, 255, 255, 0.8)',
   backdropFilter: 'blur(10px)',
-  padding: '20px',
   boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
   border: '1px solid rgba(255, 255, 255, 0.3)',
+  alignItems: 'center',
+  justifyContent: 'center',
+  display: 'flex',
+  borderRadius: 14,
+  marginRight: 50
 });
