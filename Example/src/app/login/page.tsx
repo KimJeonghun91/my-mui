@@ -3,7 +3,8 @@
 import { styled } from "@mui/material";
 import * as yup from 'yup';
 import RootView from "../../../lib/shared/ui/rootView";
-import Form, { FormValues } from "../../../lib/widgets/Form";
+import Form from "../../../lib/widgets/Form";
+import { FormValues } from "../../../lib/widgets/Form/model/types";
 
 export default function Login() {
 
