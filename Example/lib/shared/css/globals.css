@@ -105,3 +105,26 @@ a {
     color-scheme: light;
   }
 }
+
+
+/* -------------------------------- 스크롤바 스타일 -------------------------------- */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fafdff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e9
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e9;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e9 #fafdff;
+}
