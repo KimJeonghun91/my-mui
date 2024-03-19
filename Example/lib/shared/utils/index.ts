@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { DrawerMenuProps } from "../../widgets/LayoutDrawer/model/types";
+import { DrawerMenuProps } from "../../widgets/Layout/LayoutDrawer/model/types";
 
 export const isPrivateRoute = (menuList: DrawerMenuProps[], currentPath: string) => useMemo(() =>
     menuList.some(menuItem =>

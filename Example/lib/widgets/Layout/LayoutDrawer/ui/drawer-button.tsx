@@ -1,6 +1,6 @@
 import React from "react";
 import IconButton from '@mui/material/IconButton';
-import { IconRightOpen } from "../../../shared/assets/images";
+import { IconRightOpen } from "../../../../shared/assets/images";
 import { useLayoutDrawer } from "../model/useLayoutDrawer";
 
 interface Props {

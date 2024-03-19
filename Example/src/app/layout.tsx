@@ -1,14 +1,11 @@
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
-import { StyledEngineProvider } from '@mui/material/styles';
 import { Noto_Sans_KR } from "next/font/google";
-import Box from '@mui/material/Box';
 import ThemeClient from "../../lib/shared/theme";
-import LayoutDrawer from "../../lib/widgets/LayoutDrawer";
 import { DRAWER_MENU_LIST } from '../shared/constants/drawerMenuList';
 import { LogoGoogle, LogoGoogleMini } from '../shared/assets/images';
 import "../../lib/shared/css/globals.css";
-import LayoutAppBar from '../../lib/widgets/LayoutAppBar';
+import Layout from '../../lib/widgets/Layout';
 
 const defaultFont = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -39,28 +36,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <StyledEngineProvider injectFirst>
-      <html lang="ko">
-        <body className={defaultFont.className}>
-          <ThemeClient>
-            <Box sx={{ display: 'flex' }}>
-              <LayoutDrawer
-                menuList={DRAWER_MENU_LIST}
-                logoOpen={<LogoGoogle />}
-                logoClose={<LogoGoogleMini />}
-              />
-
-              <Box component="main" sx={{ flexGrow: 1 }}>
-                <LayoutAppBar
-                  menuList={DRAWER_MENU_LIST}
-                />
-
-                {children}
-              </Box>
-            </Box>
-          </ThemeClient>
-        </body>
-      </html>
-    </StyledEngineProvider>
+    <html lang="ko">
+      <body className={defaultFont.className}>
+        <ThemeClient>
+          <Layout
+            menuList={DRAWER_MENU_LIST}
+            logoOpen={<LogoGoogle />}
+            logoClose={<LogoGoogleMini />}
+          >
+            {children}
+          </Layout>
+        </ThemeClient>
+      </body>
+    </html>
   );
 }
