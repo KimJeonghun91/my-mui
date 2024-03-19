@@ -1,5 +1,5 @@
-import { useFormik } from "formik";
-import { FormProps } from "./types";
+import { FormikProps, useFormik } from "formik";
+import { FormProps, FormValues } from "./types";
 
 export const useFormikForm = <T extends Record<string, any>>({
     initialValues,
@@ -15,3 +15,10 @@ export const useFormikForm = <T extends Record<string, any>>({
         onSubmit(values as T);
     },
 });
+
+export const hasFormikErrors = (formik: FormikProps<FormValues>): boolean => {
+    return (
+        Object.keys(formik.errors).length > 0 &&
+        Object.keys(formik.touched).some(key => formik.touched[key])
+    );
+};

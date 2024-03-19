@@ -1,14 +1,19 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { styled } from "@mui/material";
 import RootView from "../../../lib/shared/ui/rootView";
 import Form from "../../../lib/widgets/Form";
-import { initialValues, validationSchema } from "./model/useLogin";
 import { FormValues } from "../../../lib/widgets/Form/model/types";
+import { initialValues, validationSchema } from "./model/loginInfo";
+import { PrivateRoutes } from '../../shared/constants/urls';
 
 export default function Login() {
+  const router = useRouter();
+
   const handleSubmit = (values: FormValues) => {
     console.log(values);
+    router.push(PrivateRoutes.Home);
   }
 
   return (
@@ -42,7 +47,7 @@ const LoginBackground = styled('div')(({ theme }) => ({
 
 const LoginContainer = styled('div')({
   position: 'relative',
-  minWidth: '380px',
+  minWidth: '400px',
   padding: '40px',
   background: 'rgba(255, 255, 255, 0.8)',
   backdropFilter: 'blur(10px)',
