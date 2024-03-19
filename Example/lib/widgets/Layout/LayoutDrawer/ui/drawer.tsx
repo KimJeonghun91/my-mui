@@ -1,10 +1,10 @@
 import React from 'react';
 import MuiDrawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
-import { DrawerMenuProps } from '../model/types';
+import { DrawerMenuProps } from '../../model/types';
 import DrawerHeader from './drawer-header';
 import DrawerMenuList from './drawer-menu-list';
-import { useLayoutDrawer } from '../model/useLayoutDrawer';
+import { useLayoutDrawer } from '../../model/useLayoutDrawer';
 
 interface Props {
     menuList: DrawerMenuProps[];

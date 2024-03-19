@@ -5,13 +5,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { useRouter } from 'next/navigation';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
-import { DrawerMenuProps } from '../model/types';
+import { DrawerMenuProps } from '../../model/types';
 import { Box, Collapse, styled } from '@mui/material';
 import DrawerMenuSub from './drawer-menu-item-sub';
 import DrawerTooltipSub from './drawer-tooltip-sub';
 import { SvgBox } from '../../../../shared/ui/svgBox';
 import { UpArrow } from '../../../../shared/assets/images';
-import { useLayoutDrawer } from '../model/useLayoutDrawer';
+import { useLayoutDrawer } from '../../model/useLayoutDrawer';
 
 interface Props {
     menuItem: DrawerMenuProps;

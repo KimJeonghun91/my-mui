@@ -2,7 +2,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { useRouter } from 'next/navigation';
-import { DrawerMenuSubProps } from '../model/types';
+import { DrawerMenuSubProps } from '../../model/types';
 
 interface Props {
     menuItem: DrawerMenuSubProps;

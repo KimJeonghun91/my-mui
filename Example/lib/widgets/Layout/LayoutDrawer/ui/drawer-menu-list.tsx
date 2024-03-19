@@ -1,6 +1,6 @@
 import List from '@mui/material/List';
 import { usePathname } from 'next/navigation';
-import { DrawerMenuProps } from '../model/types';
+import { DrawerMenuProps } from '../../model/types';
 import DrawerMenuItem from './drawer-menu-item';
 
 interface Props {

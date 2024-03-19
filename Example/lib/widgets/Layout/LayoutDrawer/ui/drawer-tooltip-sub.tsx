@@ -1,7 +1,7 @@
 import { Box, Divider, Typography } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useRouter } from 'next/navigation';
-import { DrawerMenuProps } from "../model/types";
+import { DrawerMenuProps } from "../../model/types";
 
 interface Props {
     menuItem: DrawerMenuProps;

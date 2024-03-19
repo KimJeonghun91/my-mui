@@ -4,8 +4,8 @@ import React, { PropsWithChildren } from 'react';
 import { usePathname } from 'next/navigation';
 import LayoutDrawer from './LayoutDrawer';
 import { isPrivateRoute } from '../../shared/utils';
-import { DrawerMenuProps } from './LayoutDrawer/model/types';
-import { LayoutProvider } from './LayoutDrawer/model/useLayoutDrawer';
+import { DrawerMenuProps } from './model/types';
+import { LayoutProvider } from './model/useLayoutDrawer';
 import { Box } from '@mui/material';
 import LayoutAppBar from './LayoutAppBar';
 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Box from '@mui/material/Box';
-import { DrawerMenuProps } from './model/types';
+import { DrawerMenuProps } from '../model/types';
 import Drawer from './ui/drawer';
 import { DrawerButton } from './ui/drawer-button';
 

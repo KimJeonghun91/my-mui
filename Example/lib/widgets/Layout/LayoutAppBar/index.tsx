@@ -6,8 +6,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import { usePathname } from 'next/navigation';
-import { DrawerMenuProps } from '../LayoutDrawer/model/types';
+import { DrawerMenuProps } from '../model/types';
 import { isPrivateRoute } from '../../../shared/utils';
+import { useLayoutDrawer } from '../model/useLayoutDrawer';
+import { styled } from '@mui/material';
 
 interface Props {
   menuList: DrawerMenuProps[];
@@ -16,19 +18,27 @@ interface Props {
 export default function LayoutAppBar({ menuList }: Props) {
   const pathName = usePathname();
   const isDrawerVisible = isPrivateRoute(menuList, pathName);
+  const {
+    open,
+    drawerWidth,
+  } = useLayoutDrawer();
 
   return (
     isDrawerVisible &&
     <React.Fragment>
       <CssBaseline />
       <AppBar>
-        <Toolbar>
+        <AnimatedToolbar sx={{ marginLeft: open ? drawerWidth + 'px' : '60px' }}>
           <Typography variant="h6" component="div">
             Scroll to hide App bar
           </Typography>
-        </Toolbar>
+        </AnimatedToolbar>
       </AppBar>
       <Toolbar />
     </React.Fragment>
   );
 }
+
+const AnimatedToolbar = styled(Toolbar)(({ theme }) => ({
+  transition: 'all 0.3s ease-in-out',
+}));
