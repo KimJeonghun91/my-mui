@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Stack, Box } from '@mui/material';
 import { FormikProps } from 'formik';
 import { CreateField } from './ui/create-field';
