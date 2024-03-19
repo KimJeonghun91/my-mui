@@ -29,9 +29,9 @@ export default function LayoutAppBar({ menuList }: Props) {
       <CssBaseline />
       <AppBar>
         <AnimatedToolbar sx={{ marginLeft: open ? drawerWidth + 'px' : '60px' }}>
-          <Typography variant="h6" component="div">
+          <ToolbarTitle variant='h6'>
             Scroll to hide App bar
-          </Typography>
+          </ToolbarTitle>
         </AnimatedToolbar>
       </AppBar>
       <Toolbar />
@@ -41,4 +41,9 @@ export default function LayoutAppBar({ menuList }: Props) {
 
 const AnimatedToolbar = styled(Toolbar)(({ theme }) => ({
   transition: 'all 0.3s ease-in-out',
+}));
+
+
+const ToolbarTitle = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.secondary,
 }));
