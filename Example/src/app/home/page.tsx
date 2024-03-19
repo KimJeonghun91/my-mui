@@ -2,24 +2,24 @@
 
 import Image from "next/image";
 import Button from '@mui/material/Button';
-import styles from "./ui/home.module.css";
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import RootView from "../../../lib/shared/ui/rootView";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <RootView>
       <Button variant="contained">Hello world</Button>
 
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DateCalendar />
       </LocalizationProvider>
 
-      <div className={styles.description}>
+      <div>
         <p>
           Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          <code>src/app/page.tsx</code>
         </p>
         <div>
           <a
@@ -31,7 +31,6 @@ export default function Home() {
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
               width={100}
               height={24}
               priority
@@ -40,16 +39,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
         <Image
-          className={styles.logo}
           src="/next.svg"
           alt="Next.js Logo"
           width={180}
           height={37}
           priority
         />
-      </div>
-    </main>
+    </RootView>
   );
 }

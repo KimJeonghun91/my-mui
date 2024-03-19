@@ -1,12 +1,12 @@
 "use client"
 
 import Button from '@mui/material/Button';
-import styles from "./ui/home.module.css";
+import RootView from "../../../lib/shared/ui/rootView";
 
-export default function Board2() {
+export default function Home() {
   return (
-    <main className={styles.main}>
-      <Button variant="contained">Board 22222</Button>
-    </main>
+    <RootView>
+      <Button variant="contained">Hello world 2222</Button>
+    </RootView>
   );
 }

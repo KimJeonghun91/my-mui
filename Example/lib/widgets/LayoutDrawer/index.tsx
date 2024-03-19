@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useMemo } from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import { usePathname } from 'next/navigation';
 import { DrawerMenuProps } from './model/types';
 import { LayoutDrawerProvider } from './model/useLayoutDrawer';
 import Drawer from './ui/drawer';
 import { DrawerButton } from './ui/drawer-button';
+import { isPrivateRoute } from '../../shared/utils';
 
 interface Props {
     menuList: DrawerMenuProps[];
@@ -14,19 +15,14 @@ interface Props {
     logoClose: React.JSX.Element;
 }
 
-const useIsDrawerMenuList = (menuList: DrawerMenuProps[], currentPath: string) => useMemo(() =>
-    menuList.some(menuItem =>
-        menuItem.path === currentPath ||
-        menuItem.subMenu?.some(subMenuItem => subMenuItem.path === currentPath)
-    ), [menuList, currentPath]);
 
 const LayoutDrawer: React.FC<Props> = ({ menuList, logoOpen, logoClose }) => {
     const pathName = usePathname();
-    const isDrawerMenuList = useIsDrawerMenuList(menuList, pathName);
+    const isDrawerVisible = isPrivateRoute(menuList, pathName);
 
     return (
         <LayoutDrawerProvider>
-            {isDrawerMenuList && (
+            {isDrawerVisible && (
                 <Box sx={{ position: 'relative' }}>
                     <Drawer menuList={menuList} logoOpen={logoOpen} logoClose={logoClose} />
                     <DrawerButton />

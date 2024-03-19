@@ -8,6 +8,7 @@ import LayoutDrawer from "../../lib/widgets/LayoutDrawer";
 import { DRAWER_MENU_LIST } from '../shared/constants/drawerMenuList';
 import { LogoGoogle, LogoGoogleMini } from '../shared/assets/images';
 import "../../lib/shared/css/globals.css";
+import LayoutAppBar from '../../lib/widgets/LayoutAppBar';
 
 const defaultFont = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -50,6 +51,10 @@ export default function RootLayout({
               />
 
               <Box component="main" sx={{ flexGrow: 1 }}>
+                <LayoutAppBar
+                  menuList={DRAWER_MENU_LIST}
+                />
+
                 {children}
               </Box>
             </Box>

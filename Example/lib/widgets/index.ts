@@ -1,2 +1,3 @@
 import * as LayoutDrawer from './LayoutDrawer';
-export { LayoutDrawer };
+import * as LayoutAppBar from './LayoutAppBar';
+export { LayoutDrawer, LayoutAppBar };
