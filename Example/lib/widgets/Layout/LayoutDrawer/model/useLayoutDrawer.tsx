@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from 'react';
 import { Theme, CSSObject } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
-import { LayoutDrawerContextType, LayoutDrawerProviderProps } from './types';
+import { LayoutDrawerContextType, LayoutProviderProps } from './types';
 
 const ThemeContext = createContext<LayoutDrawerContextType | null>(null);
 
@@ -13,7 +13,7 @@ export const useLayoutDrawer = () => {
     return context;
 }
 
-export const LayoutDrawerProvider: React.FC<LayoutDrawerProviderProps> = ({ children }: any) => {
+export const LayoutProvider: React.FC<LayoutProviderProps> = ({ children }: any) => {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [isSubMenuOpen, setSubMenuOpen] = useState(false);

@@ -34,6 +34,6 @@ export interface LayoutDrawerContextType {
     handleToggleSubMenu: () => void;
 }
 
-export interface LayoutDrawerProviderProps {
+export interface LayoutProviderProps {
     children: ReactNode;
 }
