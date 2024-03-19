@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import { usePathname } from 'next/navigation';
 import { DrawerMenuProps } from '../model/types';
-import { isPrivateRoute } from '../../../shared/utils';
+import { getTitleByPath, isPrivateRoute } from '../../../shared/utils';
 import { useLayoutDrawer } from '../model/useLayoutDrawer';
 import { styled } from '@mui/material';
 
@@ -18,6 +18,7 @@ interface Props {
 export default function LayoutAppBar({ menuList }: Props) {
   const pathName = usePathname();
   const isDrawerVisible = isPrivateRoute(menuList, pathName);
+  const titleName = getTitleByPath(menuList, pathName);
   const {
     open,
     drawerWidth,
@@ -29,8 +30,8 @@ export default function LayoutAppBar({ menuList }: Props) {
       <CssBaseline />
       <AppBar>
         <AnimatedToolbar sx={{ marginLeft: open ? drawerWidth + 'px' : '60px' }}>
-          <ToolbarTitle variant='h6'>
-            Scroll to hide App bar
+          <ToolbarTitle variant='subtitle1'>
+            {titleName}
           </ToolbarTitle>
         </AnimatedToolbar>
       </AppBar>
@@ -45,5 +46,5 @@ const AnimatedToolbar = styled(Toolbar)(({ theme }) => ({
 
 
 const ToolbarTitle = styled(Typography)(({ theme }) => ({
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.primary,
 }));
