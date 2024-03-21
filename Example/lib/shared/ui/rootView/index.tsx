@@ -1,5 +1,4 @@
 import { styled } from '@mui/material/styles';
-import { useEffect } from 'react';
 
 interface RootViewProps {
   children: React.ReactNode;
@@ -8,10 +7,6 @@ interface RootViewProps {
 const RootView: React.FC<RootViewProps> = ({
   children,
 }) => {
-  useEffect(() => {
-    // TODO: auth Guard
-  }, []);
-
   return (
     <Main>{children}</Main>
   );

@@ -18,7 +18,7 @@ export const DrawerButton: React.FC<Props> = ({ }) => {
                 position: 'absolute',
                 top: 47,
                 right: -13,
-                zIndex: 9999,
+                zIndex: 1200,
                 backgroundColor: 'rgba(255, 255, 255, 0.77)',
                 borderRadius: 16,
                 boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
