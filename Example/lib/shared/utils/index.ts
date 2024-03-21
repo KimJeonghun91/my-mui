@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { DrawerMenuProps } from "../../widgets/Layout/model/types";
+import { DrawerMenuProps, DrawerMenuSubProps } from "../../widgets/Layout/model/types";
 
 export const isPrivateRoute = (menuList: DrawerMenuProps[], currentPath: string) => useMemo(() =>
     menuList.some(menuItem =>
@@ -7,20 +7,20 @@ export const isPrivateRoute = (menuList: DrawerMenuProps[], currentPath: string)
         menuItem.subMenu?.some(subMenuItem => subMenuItem.path === currentPath)
     ), [menuList, currentPath]);
 
-export const getTitleByPath = (menuList: DrawerMenuProps[], path: string): string => {
+export const getTitleByPath = (menuList: DrawerMenuProps[], path: string): DrawerMenuProps | DrawerMenuSubProps | null => {
     for (const item of menuList) {
         if (item.path === path) {
-            return item.title;
+            return item;
         }
 
         if (item.subMenu) {
             for (const subItem of item.subMenu) {
                 if (subItem.path === path) {
-                    return subItem.title;
+                    return subItem;
                 }
             }
         }
     }
 
-    return '';
+    return null;
 };

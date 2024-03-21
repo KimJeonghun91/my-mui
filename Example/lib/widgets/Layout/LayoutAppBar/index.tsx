@@ -18,7 +18,7 @@ interface Props {
 export default function LayoutAppBar({ menuList }: Props) {
   const pathName = usePathname();
   const isDrawerVisible = isPrivateRoute(menuList, pathName);
-  const titleName = getTitleByPath(menuList, pathName);
+  const menuItem = getTitleByPath(menuList, pathName);
   const {
     open,
     drawerWidth,
@@ -31,7 +31,7 @@ export default function LayoutAppBar({ menuList }: Props) {
       <AppBar>
         <AnimatedToolbar sx={{ marginLeft: open ? drawerWidth + 'px' : '60px' }}>
           <ToolbarTitle variant='subtitle1'>
-            {titleName}
+            {menuItem?.title}
           </ToolbarTitle>
         </AnimatedToolbar>
       </AppBar>
