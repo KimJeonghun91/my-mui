@@ -6,10 +6,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import { usePathname } from 'next/navigation';
+import { styled } from '@mui/material';
 import { DrawerMenuProps } from '../model/types';
 import { getTitleByPath, isPrivateRoute } from '../../../shared/utils';
 import { useLayoutDrawer } from '../model/useLayoutDrawer';
-import { styled } from '@mui/material';
 
 interface Props {
   menuList: DrawerMenuProps[];
@@ -29,7 +29,7 @@ export default function LayoutAppBar({ menuList }: Props) {
     <React.Fragment>
       <CssBaseline />
       <AppBar>
-        <AnimatedToolbar sx={{ marginLeft: open ? drawerWidth + 'px' : '60px' }}>
+        <AnimatedToolbar sx={{ marginLeft: open ? (drawerWidth + 30) + 'px' : '90px' }}>
           <ToolbarTitle variant='subtitle1'>
             {menuItem?.title}
           </ToolbarTitle>
@@ -41,7 +41,7 @@ export default function LayoutAppBar({ menuList }: Props) {
 }
 
 const AnimatedToolbar = styled(Toolbar)(({ theme }) => ({
-  transition: 'all 0.3s ease-in-out',
+  transition: 'all 0.2s',
 }));
 
 

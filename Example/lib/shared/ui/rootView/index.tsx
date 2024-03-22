@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
 
 interface RootViewProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const RootView: React.FC<RootViewProps> = ({

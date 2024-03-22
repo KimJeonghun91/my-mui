@@ -3,12 +3,12 @@
 import React, { PropsWithChildren, Suspense } from 'react';
 import { usePathname } from 'next/navigation';
 import LayoutDrawer from './LayoutDrawer';
-import { isPrivateRoute } from '../../shared/utils';
-import { DrawerMenuProps } from './model/types';
-import { LayoutProvider } from './model/useLayoutDrawer';
 import { Box } from '@mui/material';
 import LayoutAppBar from './LayoutAppBar';
 import LoadingView from '../../shared/ui/loadingView';
+import { isPrivateRoute } from '../../shared/utils';
+import { DrawerMenuProps } from './model/types';
+import { LayoutProvider } from './model/useLayoutDrawer';
 
 interface Props {
     menuList: DrawerMenuProps[];
