@@ -11,6 +11,7 @@ interface Props {
 export const FieldText: React.FC<Props> = ({ field, formik }) => {
     return (
         <TextField
+            autoComplete="new-password"
             fullWidth
             key={field.id}
             id={field.id}
