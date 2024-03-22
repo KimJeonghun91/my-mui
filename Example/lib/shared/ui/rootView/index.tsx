@@ -20,5 +20,5 @@ const Main = styled('main')({
   justifyContent: 'space-between',
   alignItems: 'center',
   minHeight: '100vh',
-  padding: 0,
+  padding: '0 20px',
 });
