@@ -114,7 +114,7 @@ export default function customPalette(themeMode: ThemeMode) {
       secondary: GREY[600],
       disabled: GREY[500],
     },
-    background: { paper: '#fff', default: '#fff', neutral: GREY[200] },
+    background: { paper: '#fff', default: '#fff', neutral: GREY[100] },
     action: {
       ...COMMON.action,
       active: GREY[600],

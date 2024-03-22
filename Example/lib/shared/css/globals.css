@@ -6,8 +6,6 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -117,14 +115,14 @@ a {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #cbd5e9
+  background: #ccd0d8
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #cbd5e9;
+  background: #ccd0d8;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #cbd5e9 #fafdff;
+  scrollbar-color: #ccd0d8 #fafdff;
 }

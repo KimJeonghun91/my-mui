@@ -6,7 +6,7 @@ import RootView from "../../../lib/shared/ui/rootView";
 export default function Home() {
   return (
     <RootView>
-      <Grid container sx={{ mt: 2 }}>
+      <Grid container sx={{ mt: 4, px: 3 }}>
         <Grid item xs={12} md={12} lg={12}>
           <Card>
             <CardHeader title="Carousel Basic 1" />
@@ -18,6 +18,7 @@ export default function Home() {
               <Button variant="outlined" size="small">조회하기</Button>
             </CardActions>
           </Card>
+          
         </Grid>
       </Grid>
     </RootView>

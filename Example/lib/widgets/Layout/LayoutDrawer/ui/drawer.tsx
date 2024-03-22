@@ -1,6 +1,5 @@
 import React from 'react';
 import MuiDrawer from '@mui/material/Drawer';
-import Divider from '@mui/material/Divider';
 import { DrawerMenuProps } from '../../model/types';
 import DrawerHeader from './drawer-header';
 import DrawerMenuList from './drawer-menu-list';
@@ -44,7 +43,7 @@ const Drawer: React.FC<Props> = ({
             open={open}
         >
             <DrawerHeader open={open} logoOpen={logoOpen} logoClose={logoClose} />
-            <Divider />
+            {/* <Divider /> */}
             <DrawerMenuList menuList={menuList} open={open} />
         </MuiDrawer>
     )

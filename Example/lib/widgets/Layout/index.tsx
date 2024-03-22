@@ -32,7 +32,7 @@ const Layout: React.FC<PropsWithChildren<Props>> = ({ menuList, logoOpen, logoCl
             </LayoutProvider>
 
             <Suspense fallback={<LoadingView />}>
-                <Box component="main" sx={{ flexGrow: 1, paddingTop: isDrawerVisible ? '70px' : '0px' }}>
+                <Box component="main" sx={{ flexGrow: 1, paddingTop: isDrawerVisible ? '56px' : '0px' }}>
                     {children}
                 </Box>
             </Suspense>

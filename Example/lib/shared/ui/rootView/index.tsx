@@ -14,11 +14,11 @@ const RootView: React.FC<RootViewProps> = ({
 
 export default RootView;
 
-const Main = styled('main')({
+const Main = styled('main')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
   alignItems: 'center',
   minHeight: '100vh',
-  padding: '0 20px',
-});
+  backgroundColor: theme.palette.background.neutral,
+}));
