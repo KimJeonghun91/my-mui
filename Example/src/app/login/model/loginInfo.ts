@@ -18,10 +18,10 @@ export const initialValues = {
 export const validationSchema = yup.object({
     email: yup
         .string()
-        .email('Enter a valid email')
-        .required('Email is required'),
+        .email('이메일 형식이 아닙니다.')
+        .required('이메일은 필수 입력이에요.'),
     password: yup
         .string()
-        .min(8, 'Password should be of minimum 8 characters length')
-        .required('Password is required'),
+        .min(8, '비밀번호는 8자 이상 입력해주세요.')
+        .required('비밀번호는 필수 입력이에요.'),
 });

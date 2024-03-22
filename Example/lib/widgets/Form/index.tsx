@@ -15,13 +15,13 @@ const Form = ({ initialValues, validationSchema, onSubmit, submitText }: FormPro
     return (
         <Box sx={{ width: 1 }}>
             <form onSubmit={formik.handleSubmit} autoComplete='off' autoCapitalize='off'>
-                <Stack spacing={1} >
+                <Stack spacing={0.5} >
                     <CreateField initialValues={initialValues} formik={formik} />
                 </Stack>
 
                 <Button
                     fullWidth
-                    sx={{ mt: 0.5, py: 2, borderRadius: 2 }}
+                    sx={{ mt: 0.8, py: 2, borderRadius: 2 }}
                     color={"primary"}
                     variant="contained"
                     type="submit"

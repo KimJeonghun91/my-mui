@@ -23,6 +23,9 @@ export const FieldText: React.FC<Props> = ({ field, formik }) => {
             error={formik.touched[field.id] && Boolean(formik.errors[field.id])}
             helperText={formik.touched[field.id] && formik.errors[field.id] ? String(formik.errors[field.id]) : ' '}
             margin="normal"
+            FormHelperTextProps={{
+                style: { textAlign: 'right', fontSize: '0.65rem' }
+            }}
         />
     )
 }
