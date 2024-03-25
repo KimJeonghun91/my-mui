@@ -9,6 +9,7 @@ export default function Card(theme: Theme) {
           borderRadius: Number(theme.shape.borderRadius) * 3,
           zIndex: 0,
           border: `1px solid ${alpha(theme.palette.divider, 0.15)}`,
+          padding: theme.spacing(2.5),
         },
       },
     },
@@ -19,21 +20,21 @@ export default function Card(theme: Theme) {
       },
       styleOverrides: {
         root: {
-          padding: theme.spacing(3, 3, 0),
+          padding: theme.spacing(0, 0, 2),
         },
       },
     },
     MuiCardContent: {
       styleOverrides: {
         root: {
-          padding: theme.spacing(3),
+          padding: theme.spacing(0, 0, 0, 0),
         },
       },
     },
     MuiCardActions: {
       styleOverrides: {
         root: {
-          padding: theme.spacing(2),
+          padding: theme.spacing(2, 0, 0, 0),
         },
       },
     },
