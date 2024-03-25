@@ -11,22 +11,32 @@ interface Props {
 export const FilterText: React.FC<Props> = ({ field, formik }) => {
     return (
         <TextField
-            autoComplete="new-password"
-            fullWidth
             key={field.id}
             id={field.id}
             name={field.id}
-            label={field.label}
             type={field.type}
             value={formik.values[field.id]}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.touched[field.id] && Boolean(formik.errors[field.id])}
-            helperText={formik.touched[field.id] && formik.errors[field.id] ? String(formik.errors[field.id]) : ' '}
-            margin="normal"
-            FormHelperTextProps={{
-                style: { textAlign: 'right', fontSize: '0.65rem' }
+
+            sx={{
+                '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                        borderWidth: '0 !important',
+                    },
+                },
+                height: '100%',
+                display: 'flex',
+                flex: 1
             }}
+            inputProps={{
+                style: {
+                    padding: '6px 10px',
+                    borderRadius: '0 !important',
+                },
+            }}
+            autoComplete="new-password"
+            fullWidth
         />
     )
 }
