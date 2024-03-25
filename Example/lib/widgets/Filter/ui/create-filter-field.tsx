@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FormikProps } from "formik";
-import { FieldText } from "./field-text";
+import { FilterText } from "./filter-text";
 import { FormValues } from "../../../shared/type";
 
 interface Props {
@@ -8,12 +8,12 @@ interface Props {
     formik: FormikProps<FormValues>;
 }
 
-export const CreateField: React.FC<Props> = ({ initialValues, formik }) => {
+export const CreateFilterField: React.FC<Props> = ({ initialValues, formik }) => {
     return (
         <>
             {Object.values(initialValues).map((field) => (
                 field.type === 'text' || field.type === 'password' ? (
-                    <FieldText key={field.id} field={field} formik={formik} />
+                    <FilterText key={field.id} field={field} formik={formik} />
                 ) : (
                     <></>
                 )

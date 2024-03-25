@@ -8,7 +8,7 @@ interface Props {
     formik: FormikProps<FormValues>;
 }
 
-export const FieldText: React.FC<Props> = ({ field, formik }) => {
+export const FilterText: React.FC<Props> = ({ field, formik }) => {
     return (
         <TextField
             autoComplete="new-password"

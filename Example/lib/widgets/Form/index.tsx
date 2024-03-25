@@ -1,8 +1,9 @@
 import { Button, Stack, Box } from '@mui/material';
 import { FormikProps } from 'formik';
 import { CreateField } from './ui/create-field';
-import { FormProps, FormValues } from './model/types';
+import { FormProps } from './model/types';
 import { hasFormikErrors, useFormikForm } from './model/useFormikForm';
+import { FormValues } from '../../shared/type';
 
 
 const Form = ({ initialValues, validationSchema, onSubmit, submitText }: FormProps<FormValues>) => {

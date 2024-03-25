@@ -1,6 +1,6 @@
 import { FormikProps, useFormik } from "formik";
-import { FormProps } from "./types";
 import { FormValues } from "../../../shared/type";
+import { FormProps } from "../../Form/model/types";
 
 export const useFormikForm = <T extends Record<string, any>>({
     initialValues,

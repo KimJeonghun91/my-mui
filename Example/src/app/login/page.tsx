@@ -7,7 +7,7 @@ import Form from "../../../lib/widgets/Form";
 import { FormValues } from "../../../lib/widgets/Form/model/types";
 import { initialValues, validationSchema } from "./model/loginInfo";
 import { PrivateRoutes } from '../../shared/constants/urls';
-import { LogoGoogle, LogoGoogleMini } from '../../shared/assets/images';
+import { LogoGoogle } from '../../shared/assets/images';
 
 export default function Login() {
   const router = useRouter();
