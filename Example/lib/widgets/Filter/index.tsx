@@ -4,8 +4,8 @@ import { FormikProps } from 'formik';
 import { CreateFilterField } from './ui/create-filter-field';
 import { FilterFormProps } from './model/types';
 import { useFormikForm } from './model/useFormikForm';
-import { Reset } from '../../../src/shared/assets/images';
 import { FormValues } from '../../shared/type';
+import { Reset } from '../../shared/assets/images';
 
 const Filter = ({
     headerTitle,

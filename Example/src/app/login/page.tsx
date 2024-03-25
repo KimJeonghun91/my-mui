@@ -4,10 +4,10 @@ import { useRouter } from 'next/navigation';
 import { Box, styled } from "@mui/material";
 import RootView from "../../../lib/shared/ui/rootView";
 import Form from "../../../lib/widgets/Form";
-import { FormValues } from "../../../lib/widgets/Form/model/types";
 import { initialValues, validationSchema } from "./model/loginInfo";
 import { PrivateRoutes } from '../../shared/constants/urls';
 import { LogoGoogle } from '../../shared/assets/images';
+import { FormValues } from '../../../lib/shared/type';
 
 export default function Login() {
   const router = useRouter();
